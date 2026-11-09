@@ -1,0 +1,1023 @@
+{
+  "version": 1,
+  "reviewedAt": "2026-10-31",
+  "sources": [
+    {
+      "id": "ogs",
+      "title": "OGS 定式库：直接点三三及相关局面",
+      "url": "https://online-go.com/joseki/22119"
+    },
+    {
+      "id": "michael-redmond",
+      "title": "Michael Redmond 九段：The Direct 3-3 Invasion Keep it Simple!",
+      "url": "https://www.youtube.com/watch?v=2khNnE5Q3GM&t=200"
+    },
+    {
+      "id": "knight-versus-push",
+      "title": "The 3-3 Invasion 3 — The Knight’s Move vs. the Push",
+      "url": "https://resigning-in-sente.github.io/joseki/44/2021/07/21/44-33-invasion-3-knight-vs-push/"
+    },
+    {
+      "id": "pachi44",
+      "title": "Pachi 星位原谱：S16 扳粘支线",
+      "url": "https://github.com/pasky/pachi/blob/master/joseki/joseki_44.sgf"
+    }
+  ],
+  "policy": {
+    "coordinates": "19 路棋盘，列 A–T 跳过 I；标准方向为右上角，第一手为黑。moves 保留原手顺，pass 表示原谱脱先。",
+    "sourceOrder": "OGS variation_label 的数字值；非数字标签保留为 null。官方定义为其他条件相同下的初步应法建议，通常反映常见程度，不能解释为胜率或绝对棋力排名。",
+    "done": "仅当 OGS 返回 Joseki: Done 标签时为 true；有子节点的局面也可能已经完成定式。",
+    "coverage": "26 个已核实节点及其直接后续索引；没有当前 OGS 编目的 S16 仅作为旧库说明，不伪造评级或官方顺序。",
+    "provenance": "事实取自 OGS 公开 positions 接口，已省略原文评论；中文说明为独立简述。upstreamSourceId 保留 OGS 的出处编号，externalId 可与 Josekle 导出节点关联。"
+  },
+  "positions": [
+    {
+      "externalId": 20810,
+      "play": ".root.Q16.R17",
+      "moves": [
+        "Q16",
+        "R17"
+      ],
+      "placement": "R17",
+      "category": "IDEAL",
+      "sourceOrder": 2,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 114,
+      "url": "https://online-go.com/joseki/20810",
+      "nextMoves": [
+        {
+          "placement": "R16",
+          "externalId": 20811,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        }
+      ]
+    },
+    {
+      "externalId": 20811,
+      "play": ".root.Q16.R17.R16",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16"
+      ],
+      "placement": "R16",
+      "category": "IDEAL",
+      "sourceOrder": 1,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 127,
+      "url": "https://online-go.com/joseki/20811",
+      "nextMoves": [
+        {
+          "placement": "Q17",
+          "externalId": 20829,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "S16",
+          "externalId": 20812,
+          "category": "MISTAKE",
+          "sourceOrder": null
+        }
+      ]
+    },
+    {
+      "externalId": 20812,
+      "play": ".root.Q16.R17.R16.S16",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "S16"
+      ],
+      "placement": "S16",
+      "category": "MISTAKE",
+      "sourceOrder": null,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 70,
+      "url": "https://online-go.com/joseki/20812",
+      "nextMoves": [
+        {
+          "placement": "Q17",
+          "externalId": 20813,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "S15",
+          "externalId": 20821,
+          "category": "GOOD",
+          "sourceOrder": 2
+        }
+      ]
+    },
+    {
+      "externalId": 20829,
+      "play": ".root.Q16.R17.R16.Q17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17"
+      ],
+      "placement": "Q17",
+      "category": "IDEAL",
+      "sourceOrder": 1,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 70,
+      "url": "https://online-go.com/joseki/20829",
+      "nextMoves": [
+        {
+          "placement": "P16",
+          "externalId": 22119,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "O17",
+          "externalId": 20831,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "P17",
+          "externalId": 22535,
+          "category": "IDEAL",
+          "sourceOrder": 3
+        },
+        {
+          "placement": "pass",
+          "externalId": 20830,
+          "category": "MISTAKE",
+          "sourceOrder": 4
+        }
+      ]
+    },
+    {
+      "externalId": 20830,
+      "play": ".root.Q16.R17.R16.Q17.pass",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "pass"
+      ],
+      "placement": "pass",
+      "category": "MISTAKE",
+      "sourceOrder": 4,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 77,
+      "url": "https://online-go.com/joseki/20830",
+      "nextMoves": []
+    },
+    {
+      "externalId": 20831,
+      "play": ".root.Q16.R17.R16.Q17.O17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "O17"
+      ],
+      "placement": "O17",
+      "category": "IDEAL",
+      "sourceOrder": 2,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 70,
+      "url": "https://online-go.com/joseki/20831",
+      "nextMoves": [
+        {
+          "placement": "P17",
+          "externalId": 21612,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "O18",
+          "externalId": 20832,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        }
+      ]
+    },
+    {
+      "externalId": 22535,
+      "play": ".root.Q16.R17.R16.Q17.P17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P17"
+      ],
+      "placement": "P17",
+      "category": "IDEAL",
+      "sourceOrder": 3,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 70,
+      "url": "https://online-go.com/joseki/22535",
+      "nextMoves": [
+        {
+          "placement": "P18",
+          "externalId": 22536,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "P16",
+          "externalId": 32778,
+          "category": "MISTAKE",
+          "sourceOrder": null
+        }
+      ]
+    },
+    {
+      "externalId": 22119,
+      "play": ".root.Q16.R17.R16.Q17.P16",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16"
+      ],
+      "placement": "P16",
+      "category": "IDEAL",
+      "sourceOrder": 1,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 127,
+      "url": "https://online-go.com/joseki/22119",
+      "nextMoves": [
+        {
+          "placement": "O18",
+          "externalId": 22297,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "P17",
+          "externalId": 22262,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "O17",
+          "externalId": 22120,
+          "category": "IDEAL",
+          "sourceOrder": 3
+        }
+      ],
+      "note": "此形先参考 O18 二路小飞；编号采用核实来源的编目次序，不表示脱离全局的绝对优劣。",
+      "candidateNotes": {
+        "O18": {
+          "label": "二路小飞",
+          "note": "简明的常见应法，作为这里的教学首选参考；局部至此告一段落。",
+          "sourceIds": [
+            "ogs",
+            "michael-redmond"
+          ],
+          "preferred": true
+        },
+        "P17": {
+          "label": "三路推",
+          "note": "可行的另一应法；后续何时回到局部补棋很重要。",
+          "sourceIds": [
+            "ogs",
+            "knight-versus-push"
+          ]
+        },
+        "O17": {
+          "label": "一间跳",
+          "note": "已收录的应法，相关变化涉及征子，需结合全局选择。",
+          "sourceIds": [
+            "ogs"
+          ],
+          "conditional": true
+        },
+        "S16": {
+          "label": "扳",
+          "note": "旧库保留了扳粘后续；没有把它列为本局面首选的核实依据。",
+          "sourceIds": [
+            "pachi44"
+          ],
+          "legacy": true
+        }
+      }
+    },
+    {
+      "externalId": 22297,
+      "play": ".root.Q16.R17.R16.Q17.P16.O18",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O18"
+      ],
+      "placement": "O18",
+      "category": "IDEAL",
+      "sourceOrder": 1,
+      "done": true,
+      "sourceId": "ogs",
+      "upstreamSourceId": 127,
+      "url": "https://online-go.com/joseki/22297",
+      "nextMoves": [
+        {
+          "placement": "Q10",
+          "externalId": 22491,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "pass",
+          "externalId": 22321,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "R10",
+          "externalId": 22534,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "N17",
+          "externalId": 22435,
+          "category": "IDEAL",
+          "sourceOrder": 3
+        },
+        {
+          "placement": "S17",
+          "externalId": 22298,
+          "category": "IDEAL",
+          "sourceOrder": 4
+        },
+        {
+          "placement": "O17",
+          "externalId": 22387,
+          "category": "IDEAL",
+          "sourceOrder": 5
+        },
+        {
+          "placement": "Q11",
+          "externalId": 22533,
+          "category": "GOOD",
+          "sourceOrder": 6
+        }
+      ],
+      "note": "白取角，黑取外势并得先手；这是来源标记的定式终点，后面是可选续下。"
+    },
+    {
+      "externalId": 22120,
+      "play": ".root.Q16.R17.R16.Q17.P16.O17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O17"
+      ],
+      "placement": "O17",
+      "category": "IDEAL",
+      "sourceOrder": 3,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 79,
+      "url": "https://online-go.com/joseki/22120",
+      "nextMoves": [
+        {
+          "placement": "O16",
+          "externalId": 22124,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "N15",
+          "externalId": 22121,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "pass",
+          "externalId": 22212,
+          "category": "IDEAL",
+          "sourceOrder": 3
+        },
+        {
+          "placement": "S17",
+          "externalId": 22243,
+          "category": "IDEAL",
+          "sourceOrder": 3
+        },
+        {
+          "placement": "P17",
+          "externalId": 22186,
+          "category": "IDEAL",
+          "sourceOrder": 4
+        }
+      ]
+    },
+    {
+      "externalId": 22262,
+      "play": ".root.Q16.R17.R16.Q17.P16.P17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "P17"
+      ],
+      "placement": "P17",
+      "category": "IDEAL",
+      "sourceOrder": 2,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 79,
+      "url": "https://online-go.com/joseki/22262",
+      "nextMoves": [
+        {
+          "placement": "O17",
+          "externalId": 22271,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "N17",
+          "externalId": 22263,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "O16",
+          "externalId": 22280,
+          "category": "IDEAL",
+          "sourceOrder": 3
+        }
+      ]
+    },
+    {
+      "externalId": 22321,
+      "play": ".root.Q16.R17.R16.Q17.P16.O18.pass",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O18",
+        "pass"
+      ],
+      "placement": "pass",
+      "category": "IDEAL",
+      "sourceOrder": 2,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 79,
+      "url": "https://online-go.com/joseki/22321",
+      "nextMoves": [
+        {
+          "placement": "N17",
+          "externalId": 22364,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "R12",
+          "externalId": 22348,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "Q12",
+          "externalId": 22334,
+          "category": "IDEAL",
+          "sourceOrder": 3
+        },
+        {
+          "placement": "R10",
+          "externalId": 22347,
+          "category": "IDEAL",
+          "sourceOrder": 4
+        },
+        {
+          "placement": "Q10",
+          "externalId": 22346,
+          "category": "IDEAL",
+          "sourceOrder": 5
+        },
+        {
+          "placement": "R11",
+          "externalId": 22357,
+          "category": "IDEAL",
+          "sourceOrder": 6
+        },
+        {
+          "placement": "Q11",
+          "externalId": 22322,
+          "category": "IDEAL",
+          "sourceOrder": 7
+        },
+        {
+          "placement": "S17",
+          "externalId": 22333,
+          "category": "GOOD",
+          "sourceOrder": 8
+        },
+        {
+          "placement": "N16",
+          "externalId": 22324,
+          "category": "GOOD",
+          "sourceOrder": 9
+        },
+        {
+          "placement": "O16",
+          "externalId": 22323,
+          "category": "GOOD",
+          "sourceOrder": null
+        }
+      ]
+    },
+    {
+      "externalId": 22435,
+      "play": ".root.Q16.R17.R16.Q17.P16.O18.N17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O18",
+        "N17"
+      ],
+      "placement": "N17",
+      "category": "IDEAL",
+      "sourceOrder": 3,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 79,
+      "url": "https://online-go.com/joseki/22435",
+      "nextMoves": [
+        {
+          "placement": "O17",
+          "externalId": 22459,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "pass",
+          "externalId": 22446,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "S16",
+          "externalId": 22436,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        }
+      ]
+    },
+    {
+      "externalId": 22533,
+      "play": ".root.Q16.R17.R16.Q17.P16.O18.Q11",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O18",
+        "Q11"
+      ],
+      "placement": "Q11",
+      "category": "GOOD",
+      "sourceOrder": 6,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 79,
+      "url": "https://online-go.com/joseki/22533",
+      "nextMoves": []
+    },
+    {
+      "externalId": 22491,
+      "play": ".root.Q16.R17.R16.Q17.P16.O18.Q10",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O18",
+        "Q10"
+      ],
+      "placement": "Q10",
+      "category": "IDEAL",
+      "sourceOrder": 1,
+      "done": true,
+      "sourceId": "ogs",
+      "upstreamSourceId": null,
+      "url": "https://online-go.com/joseki/22491",
+      "nextMoves": [
+        {
+          "placement": "N17",
+          "externalId": 22525,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "pass",
+          "externalId": 22518,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "N16",
+          "externalId": 22492,
+          "category": "GOOD",
+          "sourceOrder": 2
+        }
+      ]
+    },
+    {
+      "externalId": 22298,
+      "play": ".root.Q16.R17.R16.Q17.P16.O18.S17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O18",
+        "S17"
+      ],
+      "placement": "S17",
+      "category": "IDEAL",
+      "sourceOrder": 4,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 79,
+      "url": "https://online-go.com/joseki/22298",
+      "nextMoves": [
+        {
+          "placement": "S18",
+          "externalId": 22299,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        }
+      ]
+    },
+    {
+      "externalId": 22387,
+      "play": ".root.Q16.R17.R16.Q17.P16.O18.O17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O18",
+        "O17"
+      ],
+      "placement": "O17",
+      "category": "IDEAL",
+      "sourceOrder": 5,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 119,
+      "url": "https://online-go.com/joseki/22387",
+      "nextMoves": [
+        {
+          "placement": "N18",
+          "externalId": 22388,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "N17",
+          "externalId": 22406,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "P17",
+          "externalId": 22405,
+          "category": "IDEAL",
+          "sourceOrder": 3
+        }
+      ]
+    },
+    {
+      "externalId": 22534,
+      "play": ".root.Q16.R17.R16.Q17.P16.O18.R10",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O18",
+        "R10"
+      ],
+      "placement": "R10",
+      "category": "IDEAL",
+      "sourceOrder": 2,
+      "done": true,
+      "sourceId": "ogs",
+      "upstreamSourceId": 79,
+      "url": "https://online-go.com/joseki/22534",
+      "nextMoves": []
+    },
+    {
+      "externalId": 22280,
+      "play": ".root.Q16.R17.R16.Q17.P16.P17.O16",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "P17",
+        "O16"
+      ],
+      "placement": "O16",
+      "category": "IDEAL",
+      "sourceOrder": 3,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 79,
+      "url": "https://online-go.com/joseki/22280",
+      "nextMoves": [
+        {
+          "placement": "O17",
+          "externalId": 22281,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "N18",
+          "externalId": 22296,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        }
+      ]
+    },
+    {
+      "externalId": 22263,
+      "play": ".root.Q16.R17.R16.Q17.P16.P17.N17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "P17",
+        "N17"
+      ],
+      "placement": "N17",
+      "category": "IDEAL",
+      "sourceOrder": 2,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 70,
+      "url": "https://online-go.com/joseki/22263",
+      "nextMoves": [
+        {
+          "placement": "O17",
+          "externalId": 22269,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "pass",
+          "externalId": 22268,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "S16",
+          "externalId": 22264,
+          "category": "GOOD",
+          "sourceOrder": 2
+        }
+      ]
+    },
+    {
+      "externalId": 22271,
+      "play": ".root.Q16.R17.R16.Q17.P16.P17.O17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "P17",
+        "O17"
+      ],
+      "placement": "O17",
+      "category": "IDEAL",
+      "sourceOrder": 1,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": 79,
+      "url": "https://online-go.com/joseki/22271",
+      "nextMoves": [
+        {
+          "placement": "O18",
+          "externalId": 22279,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "O16",
+          "externalId": 22272,
+          "category": "GOOD",
+          "sourceOrder": 2
+        }
+      ]
+    },
+    {
+      "externalId": 22121,
+      "play": ".root.Q16.R17.R16.Q17.P16.O17.N15",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O17",
+        "N15"
+      ],
+      "placement": "N15",
+      "category": "IDEAL",
+      "sourceOrder": 2,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": null,
+      "url": "https://online-go.com/joseki/22121",
+      "nextMoves": [
+        {
+          "placement": "N18",
+          "externalId": 22122,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        }
+      ]
+    },
+    {
+      "externalId": 22124,
+      "play": ".root.Q16.R17.R16.Q17.P16.O17.O16",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O17",
+        "O16"
+      ],
+      "placement": "O16",
+      "category": "IDEAL",
+      "sourceOrder": 1,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": null,
+      "url": "https://online-go.com/joseki/22124",
+      "nextMoves": [
+        {
+          "placement": "N18",
+          "externalId": 22167,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "N17",
+          "externalId": 22129,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "P17",
+          "externalId": 22125,
+          "category": "IDEAL",
+          "sourceOrder": 3
+        }
+      ]
+    },
+    {
+      "externalId": 22186,
+      "play": ".root.Q16.R17.R16.Q17.P16.O17.P17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O17",
+        "P17"
+      ],
+      "placement": "P17",
+      "category": "IDEAL",
+      "sourceOrder": 4,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": null,
+      "url": "https://online-go.com/joseki/22186",
+      "nextMoves": [
+        {
+          "placement": "P18",
+          "externalId": 22187,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        }
+      ]
+    },
+    {
+      "externalId": 22243,
+      "play": ".root.Q16.R17.R16.Q17.P16.O17.S17",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O17",
+        "S17"
+      ],
+      "placement": "S17",
+      "category": "IDEAL",
+      "sourceOrder": 3,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": null,
+      "url": "https://online-go.com/joseki/22243",
+      "nextMoves": [
+        {
+          "placement": "O16",
+          "externalId": 22244,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        }
+      ]
+    },
+    {
+      "externalId": 22212,
+      "play": ".root.Q16.R17.R16.Q17.P16.O17.pass",
+      "moves": [
+        "Q16",
+        "R17",
+        "R16",
+        "Q17",
+        "P16",
+        "O17",
+        "pass"
+      ],
+      "placement": "pass",
+      "category": "IDEAL",
+      "sourceOrder": 3,
+      "done": false,
+      "sourceId": "ogs",
+      "upstreamSourceId": null,
+      "url": "https://online-go.com/joseki/22212",
+      "nextMoves": [
+        {
+          "placement": "N18",
+          "externalId": 22225,
+          "category": "IDEAL",
+          "sourceOrder": 1
+        },
+        {
+          "placement": "O16",
+          "externalId": 22214,
+          "category": "IDEAL",
+          "sourceOrder": 2
+        },
+        {
+          "placement": "P17",
+          "externalId": 22213,
+          "category": "IDEAL",
+          "sourceOrder": 3
+        },
+        {
+          "placement": "S17",
+          "externalId": 22224,
+          "category": "IDEAL",
+          "sourceOrder": 4
+        }
+      ]
+    }
+  ]
+}

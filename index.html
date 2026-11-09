@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta name="description" content="在一个棋盘上探索围棋定式、错着与惩罚。查看有来源的候选点、悬停预览后续，逐手研究离线定式库。">
+  <title>围棋开局定式大全</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=c294ff7492e5">
+  <script defer src="engine.js?v=67639b02b63b"></script>
+  <script defer src="data/joseki-db.js?v=cf970598edfc"></script>
+  <script defer src="joseki-context.js?v=6bc8e943b5d5"></script>
+  <script defer src="data/reviewed-sansan.js?v=f8a8c8a6bca7"></script>
+  <script defer src="data/reviewed-library.js?v=431f02310257"></script>
+  <script defer src="data/manual-order-notes.js?v=36c60587e4c7"></script>
+  <script defer src="joseki-knowledge.js?v=245d0152be40"></script>
+  <script defer src="joseki-review.js?v=811975cd6cad"></script>
+  <script defer src="more-joseki.js?v=00840c6d8852"></script>
+  <script defer src="ai-other-joseki.js?v=b16d46f3bee0"></script>
+  <script defer src="famous-joseki.js?v=d1074bbed612"></script>
+  <script defer src="curated-joseki.js?v=e6c7bab583e9"></script>
+  <script defer src="app.js?v=50ae7bec5741"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="围棋开局定式大全首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i></span><span>围棋开局定式大全</span></a>
+    <div class="header-right"><span class="offline-indicator"><i></i> 本地棋谱库</span><button class="button" id="library-toggle"><span aria-hidden="true">☷</span> 定式库 <span id="library-count" class="count"></span></button><button class="icon-button" id="help-toggle" aria-label="使用说明">?</button></div>
+  </header>
+  <main class="workspace">
+    <div class="study-layout">
+      <section class="board-section" aria-label="定式棋盘">
+        <div class="board-topbar"><nav class="presets" aria-label="定式起点"><button data-preset="empty" class="active">空棋盘</button><button data-preset="星位">星位 <small>4·4</small></button><button data-preset="小目">小目 <small>3·4</small></button><button data-preset="三三">三三</button><button data-preset="目外">目外</button><button data-preset="高目">高目</button></nav><label class="orientation-label"><span class="sr-only">棋盘方向</span><select id="orientation"><option value="0">右上角 ↗</option><option value="1">右下角 ↘</option><option value="2">左下角 ↙</option><option value="3">左上角 ↖</option><option value="5">右上 · 镜像</option><option value="6">右下 · 镜像</option><option value="7">左下 · 镜像</option><option value="4">左上 · 镜像</option></select></label></div>
+        <div class="board-frame" id="board-frame"><svg id="main-board" viewBox="0 0 640 640" role="group" aria-label="十九路围棋棋盘，点击交叉点落子" tabindex="0"></svg><div class="board-loading" id="board-loading">正在整理定式树…</div></div>
+        <div class="board-controls"><div class="history-buttons"><button id="first" class="icon-button" aria-label="回到起点" title="回到起点 (Home)">|‹</button><button id="previous" class="icon-button" aria-label="回退一手" title="回退一手 (←)">‹</button><span id="move-counter" class="move-counter">第 0 手</span><button id="next" class="icon-button" aria-label="前进一手" title="前进一手 (→)">›</button><button id="last" class="icon-button" aria-label="到已走变化末尾" title="到已走变化末尾 (End)">›|</button></div><input id="timeline" type="range" min="0" max="0" value="0" aria-label="当前手数"><button class="text-button" id="reset">重置</button></div>
+        <div class="board-bottom"><div class="legend"><span><i class="good"></i>推荐</span><span><i class="questionable"></i>有条件 / 疑问</span><span><i class="bad"></i>不推荐</span><span><i class="unknown"></i>未评级</span></div><label class="number-toggle"><input id="show-numbers" type="checkbox" checked> 手数</label></div>
+        <p class="interaction-hint"><span><kbd>左键</kbd> 落一子</span><span><kbd>悬停</kbd> 看后续</span><span><kbd>右键</kbd> 落下预览变化</span><span><kbd>滚轮</kbd> 回退 / 前进</span></p>
+      </section>
+      <aside class="study-panel" aria-label="当前局面与候选点">
+        <div class="position-heading"><span id="turn-stone" class="turn-stone black"></span><span id="turn-label">黑棋先行</span><span id="position-badge" class="position-badge">定式库内</span></div>
+        <h2 id="position-title">从角上开始</h2><p id="position-description" class="position-description">选择一个落点，沿着定式的分支向前探索。</p>
+        <div class="candidate-heading"><h3>下一手选点 <span id="candidate-count">0</span></h3><label><input type="checkbox" id="show-bad" checked> 显示错着</label></div>
+        <p id="candidate-order-note" class="candidate-order-note"></p>
+        <div id="candidate-list" class="candidate-list"></div>
+        <div id="no-candidates" class="empty-note" hidden></div>
+        <div class="mobile-preview-actions" id="mobile-preview-actions" hidden><button class="button primary" id="apply-preview">落下整段变化</button></div>
+        <div class="study-note"><div class="section-label">本手解说 <span id="note-quality"></span></div><p id="move-note"></p><details id="original-note"><summary>查看原棋谱评注</summary><p id="original-note-text"></p></details><div id="condition-note" class="condition-note" hidden></div></div>
+        <div id="review-links" class="review-links" hidden></div>
+        <div class="source-line"><span>棋谱来源</span><a id="source-link" target="_blank" rel="noopener noreferrer">本地定式库</a></div>
+        <div class="panel-actions"><button class="text-button" id="copy-link">复制局面链接</button><button class="text-button" id="download-sgf">下载 SGF</button></div>
+        <p class="evaluation-note">颜色来自棋谱标注及已核实的局部说明；未评级不等于坏棋。定式需结合全盘、征子和行棋方向。</p>
+      </aside>
+    </div>
+    <footer class="workspace-footer"><span>读定式，也读偏离后的应对。</span><button class="text-button" id="sources-toggle">数据来源与收录说明 ↗</button></footer>
+  </main>
+  <section class="variation-preview" id="variation-preview" aria-label="后续变化预览" hidden><div class="preview-top"><span id="preview-quality" class="quality-chip"></span><span id="preview-length"></span><button class="icon-button preview-close" id="preview-close" aria-label="关闭预览">×</button></div><h3 id="preview-title"></h3><p id="preview-caption"></p><svg id="preview-board" viewBox="0 0 400 400" role="img" aria-label="后续定式结果"></svg><p id="preview-note" class="preview-note"></p><div class="preview-footer"><span>数字为后续手顺</span><span>右键落下此变化 ↵</span></div></section>
+  <dialog id="library-dialog" class="library-dialog"><div class="dialog-heading"><div><div class="eyebrow">THE JOSEKI LIBRARY</div><h2>定式库</h2></div><button class="icon-button" data-close="library-dialog" aria-label="关闭定式库">×</button></div><p class="dialog-intro" id="library-intro"></p><input id="library-search" class="search-input" type="search" placeholder="搜索定式名称、落点、英文名或来源…" aria-label="搜索定式库"><div class="library-filters"><button class="active" data-library-filter="all">全部</button><button data-library-filter="named">名定式</button><button data-library-filter="bad">错着与惩罚</button><button data-library-filter="curated">中文精选</button></div><div id="library-results" class="library-results"></div><div class="dialog-bottom" id="library-result-count"></div></dialog>
+  <dialog id="help-dialog" class="info-dialog"><div class="dialog-heading"><h2>把变化放在手边</h2><button class="icon-button" data-close="help-dialog" aria-label="关闭说明">×</button></div><dl class="help-list"><dt>左键点击候选点</dt><dd>始终按黑白交替落子，候选只显示当前行棋方。也可点击其他空点自由落子。</dd><dt>悬停候选点</dt><dd>浮窗展示这一分支的后续结果，有名称时显示名称。数字从候选这一手起计数。</dd><dt>脱先后继续推荐</dt><dd>在棋盘远处实际下一手，轮次正常交替；角上棋形未变时，继续推荐另一方的局部续着，例如双飞燕。附近未收录的落子会改变棋形，不强行沿用旧定式。</dd><dt>右键点击候选点 / 浮窗</dt><dd>把浮窗中显示的后续逐手加入棋盘历史，可以逐手回滚。预览在定式完成处停止；后续分叉缺少唯一的来源优先应法时也停止，等待你选择。</dd><dt>鼠标滚轮 / ← →</dt><dd>向上回退，向下前进。已有历史优先重放；没有后续历史时，只沿唯一的来源优先应法或唯一无条件续着前进；其他分叉需先选落点。需要脱先时请在棋盘上选择实际落点；已选历史照常重放。</dd><dt>手机 / 平板</dt><dd>候选点旁的“预览”按钮打开浮窗，“落下整段变化”执行后续。底部箭头支持逐手回退。</dd><dt>数字与颜色</dt><dd>候选点数字对应列表：已核实局面按来源建议及教学说明排序，其余仅作编号，不能当作强弱排名；棋子上的数字是落子手数。红色仅用于原谱明确标注的错着，不把未知位置判错。</dd></dl></dialog>
+  <dialog id="sources-dialog" class="info-dialog"><div class="dialog-heading"><h2>数据来源与范围</h2><button class="icon-button" data-close="sources-dialog" aria-label="关闭来源说明">×</button></div><div id="source-details"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="screen-reader-status" class="sr-only" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+{
+  "downloadedAt": "2026-10-31",
+  "repositories": {
+    "pachi": {
+      "url": "https://github.com/pasky/pachi",
+      "commit": "617986f4570d56174cf3759392e02d7af9f58fa6"
+    },
+    "gnugo": {
+      "url": "https://github.com/runningskull/gnugo",
+      "commit": "84a32e9cee2a70c0ec6ef58c1be279fed84a9a53"
+    },
+    "josekle": {
+      "url": "https://github.com/okonomichiyaki/josekle",
+      "commit": "d03842ba6895c9fe51999dff332b342922fdf4db"
+    }
+  },
+  "files": [
+    {
+      "sourceId": "pachi",
+      "path": "raw/pachi/COPYING",
+      "upstreamPath": "COPYING",
+      "url": "https://raw.githubusercontent.com/pasky/pachi/617986f4570d56174cf3759392e02d7af9f58fa6/COPYING",
+      "sha256": "32b1062f7da84967e7019d01ab805935caa7ab7321a7ced0e30ebe75e5df1670",
+      "bytes": 17992
+    },
+    {
+      "sourceId": "pachi",
+      "path": "raw/pachi/README",
+      "upstreamPath": "joseki/README",
+      "url": "https://raw.githubusercontent.com/pasky/pachi/617986f4570d56174cf3759392e02d7af9f58fa6/joseki/README",
+      "sha256": "0ed55b6eb5725160c8d6faff3d2675cf8aea268bf39e0445921ef46962443055",
+      "bytes": 6067
+    },
+    {
+      "sourceId": "pachi",
+      "path": "raw/pachi/joseki_33.sgf",
+      "upstreamPath": "joseki/joseki_33.sgf",
+      "url": "https://raw.githubusercontent.com/pasky/pachi/617986f4570d56174cf3759392e02d7af9f58fa6/joseki/joseki_33.sgf",
+      "sha256": "b8f48d35be7852eb8619f3c58dc314330bae2e0911f35bc454267355ba73f143",
+      "bytes": 306
+    },
+    {
+      "sourceId": "pachi",
+      "path": "raw/pachi/joseki_34.sgf",
+      "upstreamPath": "joseki/joseki_34.sgf",
+      "url": "https://raw.githubusercontent.com/pasky/pachi/617986f4570d56174cf3759392e02d7af9f58fa6/joseki/joseki_34.sgf",
+      "sha256": "3468f84abc51b922c6754db8c05e091bffa7b65ff32dbc19c72b51421be9f7c9",
+      "bytes": 9791
+    },
+    {
+      "sourceId": "pachi",
+      "path": "raw/pachi/joseki_44.sgf",
+      "upstreamPath": "joseki/joseki_44.sgf",
+      "url": "https://raw.githubusercontent.com/pasky/pachi/617986f4570d56174cf3759392e02d7af9f58fa6/joseki/joseki_44.sgf",
+      "sha256": "c5206462188dcbf679375b1d82345c12c1f5895b6282a2030a7b0f03cf900b22",
+      "bytes": 14705
+    },
+    {
+      "sourceId": "pachi",
+      "path": "raw/pachi/joseki_54.sgf",
+      "upstreamPath": "joseki/joseki_54.sgf",
+      "url": "https://raw.githubusercontent.com/pasky/pachi/617986f4570d56174cf3759392e02d7af9f58fa6/joseki/joseki_54.sgf",
+      "sha256": "47b6099d54071af4b8abcbc7770d8a80085fee2074e59a1d2aa1ac548abe7223",
+      "bytes": 1551
+    },
+    {
+      "sourceId": "gnugo",
+      "path": "raw/gnugo/COPYING",
+      "upstreamPath": "COPYING",
+      "url": "https://raw.githubusercontent.com/runningskull/gnugo/84a32e9cee2a70c0ec6ef58c1be279fed84a9a53/COPYING",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147
+    },
+    {
+      "sourceId": "gnugo",
+      "path": "raw/gnugo/joseki.c",
+      "upstreamPath": "patterns/joseki.c",
+      "url": "https://raw.githubusercontent.com/runningskull/gnugo/84a32e9cee2a70c0ec6ef58c1be279fed84a9a53/patterns/joseki.c",
+      "sha256": "ba522f6b1329f1a7a7b4ebd76cf99cfe091bb4f8f4ca8dcf4db3140ff60c1570",
+      "bytes": 12048
+    },
+    {
+      "sourceId": "gnugo",
+      "path": "raw/gnugo/gogo.sgf",
+      "upstreamPath": "patterns/gogo.sgf",
+      "url": "https://raw.githubusercontent.com/runningskull/gnugo/84a32e9cee2a70c0ec6ef58c1be279fed84a9a53/patterns/gogo.sgf",
+      "sha256": "2826e8c1d98661e5180c88f1454ff23a45d7b93ce836209f4d630909f9f0e308",
+      "bytes": 3100
+    },
+    {
+      "sourceId": "gnugo",
+      "path": "raw/gnugo/hoshi_keima.sgf",
+      "upstreamPath": "patterns/hoshi_keima.sgf",
+      "url": "https://raw.githubusercontent.com/runningskull/gnugo/84a32e9cee2a70c0ec6ef58c1be279fed84a9a53/patterns/hoshi_keima.sgf",
+      "sha256": "8e445885ba3169c571904426d2c1d0252df3134a7cf691b01de50a830d645383",
+      "bytes": 15545
+    },
+    {
+      "sourceId": "gnugo",
+      "path": "raw/gnugo/hoshi_other.sgf",
+      "upstreamPath": "patterns/hoshi_other.sgf",
+      "url": "https://raw.githubusercontent.com/runningskull/gnugo/84a32e9cee2a70c0ec6ef58c1be279fed84a9a53/patterns/hoshi_other.sgf",
+      "sha256": "208865a515b83900878e78587a03286e1462a2e3277f7dbc9d8b35308ed2e4ca",
+      "bytes": 5603
+    },
+    {
+      "sourceId": "gnugo",
+      "path": "raw/gnugo/komoku.sgf",
+      "upstreamPath": "patterns/komoku.sgf",
+      "url": "https://raw.githubusercontent.com/runningskull/gnugo/84a32e9cee2a70c0ec6ef58c1be279fed84a9a53/patterns/komoku.sgf",
+      "sha256": "522b4960a1b048ae0c9c2a9a14d123cba065a522621ba8aa5f3789818e059ec5",
+      "bytes": 8721
+    },
+    {
+      "sourceId": "gnugo",
+      "path": "raw/gnugo/mokuhazushi.sgf",
+      "upstreamPath": "patterns/mokuhazushi.sgf",
+      "url": "https://raw.githubusercontent.com/runningskull/gnugo/84a32e9cee2a70c0ec6ef58c1be279fed84a9a53/patterns/mokuhazushi.sgf",
+      "sha256": "c02ead48df6749b0578f2860a8bfc4c35632ac085c7974fcfcd266ab8034c978",
+      "bytes": 1216
+    },
+    {
+      "sourceId": "gnugo",
+      "path": "raw/gnugo/sansan.sgf",
+      "upstreamPath": "patterns/sansan.sgf",
+      "url": "https://raw.githubusercontent.com/runningskull/gnugo/84a32e9cee2a70c0ec6ef58c1be279fed84a9a53/patterns/sansan.sgf",
+      "sha256": "f383c9049b638dff59f5f5fd1f7791aefd09a04019c1369cd1ed1564031ad878",
+      "bytes": 1195
+    },
+    {
+      "sourceId": "gnugo",
+      "path": "raw/gnugo/takamoku.sgf",
+      "upstreamPath": "patterns/takamoku.sgf",
+      "url": "https://raw.githubusercontent.com/runningskull/gnugo/84a32e9cee2a70c0ec6ef58c1be279fed84a9a53/patterns/takamoku.sgf",
+      "sha256": "b8910ff71bdbcbbca260268c04a809cf840212a19d9a5c07626bbb7f45254101",
+      "bytes": 2176
+    },
+    {
+      "sourceId": "josekle",
+      "path": "raw/josekle/LICENSE",
+      "upstreamPath": "LICENSE",
+      "url": "https://raw.githubusercontent.com/okonomichiyaki/josekle/d03842ba6895c9fe51999dff332b342922fdf4db/LICENSE",
+      "sha256": "bf92c01b73fdfa3d026f9fb0e4cb331554d4d8c154dbbd6f63deaab8be0c0086",
+      "bytes": 1089
+    },
+    {
+      "sourceId": "josekle",
+      "path": "raw/josekle/scrape.rb",
+      "upstreamPath": "sgf/scrape.rb",
+      "url": "https://raw.githubusercontent.com/okonomichiyaki/josekle/d03842ba6895c9fe51999dff332b342922fdf4db/sgf/scrape.rb",
+      "sha256": "9fec78e1e3cf3760a8b4ec20ad28da2839c5b5b0642a084795f4766d316be002",
+      "bytes": 4491
+    },
+    {
+      "sourceId": "josekle",
+      "path": "raw/josekle/dictionary.sgf",
+      "upstreamPath": "sgf/dictionary.sgf",
+      "url": "https://raw.githubusercontent.com/okonomichiyaki/josekle/d03842ba6895c9fe51999dff332b342922fdf4db/sgf/dictionary.sgf",
+      "sha256": "bb21aa0139b45f42732b3a364d0646b494cf82122efef82c19ab4999fa0c3911",
+      "bytes": 173609
+    }
+  ]
+}

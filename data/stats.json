@@ -1,0 +1,35 @@
+{
+  "nodes": 16531,
+  "moves": 16454,
+  "leaves": 3507,
+  "bad": 38,
+  "questionable": 367,
+  "good": 16049,
+  "unknown": 0,
+  "badWithFollowups": 36,
+  "sources": 3,
+  "collections": 12,
+  "maxDepth": 41,
+  "passes": 319,
+  "setupNodes": 25,
+  "bySource": {
+    "pachi": {
+      "nodes": 2775,
+      "leaves": 508,
+      "bad": 28,
+      "questionable": 139
+    },
+    "gnugo": {
+      "nodes": 1991,
+      "leaves": 332,
+      "bad": 10,
+      "questionable": 228
+    },
+    "josekle": {
+      "nodes": 11765,
+      "leaves": 2667,
+      "bad": 0,
+      "questionable": 0
+    }
+  }
+}
