@@ -8,6 +8,43 @@ from pathlib import Path
 
 
 class RevalidatingHandler(SimpleHTTPRequestHandler):
+    def version_string(self):
+        return "Joseki"
+
+    def public_path(self, path):
+        directory = Path(self.directory)
+        try:
+            relatives = (path.relative_to(directory), path.resolve().relative_to(directory.resolve()))
+        except (ValueError, OSError, RuntimeError):
+            return False
+        for relative in relatives:
+            if any(part.startswith(".") or part == "__pycache__" for part in relative.parts):
+                return False
+            if relative.parts and relative.parts[0] in {"scripts", "tests"}:
+                return False
+            if relative.suffix.lower() in {".py", ".pyc", ".pyo"}:
+                return False
+        return True
+
+    def send_head(self):
+        path = Path(self.translate_path(self.path))
+        if not self.public_path(path):
+            self.send_error(404)
+            return None
+        if path.is_dir():
+            for name in ("index.html", "index.htm"):
+                index = path / name
+                if index.exists():
+                    if not self.public_path(index):
+                        self.send_error(404)
+                        return None
+                    break
+        return super().send_head()
+
+    def list_directory(self, path):
+        self.send_error(404)
+        return None
+
     def end_headers(self):
         # Applies to index pages, versioned URLs, and 304 responses alike.
         # Unchanged files can still use the browser's cached response body.

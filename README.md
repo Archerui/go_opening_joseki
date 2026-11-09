@@ -22,13 +22,13 @@
 ## 本地运行
 
 ```sh
-cd template
+cd go_opening_joseki
 python3 server.py 8000
 ```
 
 打开 <http://localhost:8000/>。也可以直接打开 `index.html`；静态 JS 数据使用普通 script 标签载入，不依赖 fetch。复制链接的能力受浏览器剪贴板权限影响，失败时会把局面写入地址栏以便手动复制。
 
-现有服务器的 `go-joseki.service` 使用 `server.py` 服务本目录，继续监听 **9310**，监听地址和防火墙设置不变。所有资源返回 `Cache-Control: no-cache`，普通刷新会验证文件是否更新，未修改的文件仍可使用 304 缓存。脚本、样式和字体的资源地址也已加入版本参数，绕过此前没有更新校验的旧缓存。可用 `systemctl --user status go-joseki.service` 查看状态。
+`server.py` 默认仅监听本机。所有资源返回 `Cache-Control: no-cache`，普通刷新会验证文件是否更新，未修改的文件仍可使用 304 缓存。脚本、样式和字体的资源地址带有版本参数，用于更新旧缓存。服务不提供隐藏文件、Python 缓存、开发脚本或目录列表；部署配置在仓库之外维护。
 
 ## 数据规模与来源
 
@@ -79,6 +79,7 @@ python3 server.py 8000
 ```sh
 python3 scripts/build-joseki.py
 python3 scripts/verify-joseki.py
+python3 -B -m unittest discover -s tests -p 'test_*.py'
 node --test tests/engine.test.cjs tests/knowledge.test.cjs tests/review.test.cjs tests/review-library.test.cjs tests/context.test.cjs
 node scripts/audit-order.cjs
 ```
@@ -91,7 +92,7 @@ node scripts/audit-order.cjs
 npm install --prefix /tmp/fangcun-qa playwright-core@1.51.1 --no-save --no-package-lock
 NODE_PATH=/tmp/fangcun-qa/node_modules \
 CHROME_PATH=/path/to/chromium \
-JOSEKI_URL=http://127.0.0.1:9310/ \
+JOSEKI_URL=http://127.0.0.1:8000/ \
 node --test tests/browser.test.cjs tests/candidate-turns.test.cjs tests/tenuki.test.cjs tests/wheel.test.cjs tests/numbering.test.cjs tests/named-library.test.cjs tests/mi-family.test.cjs tests/cache-refresh.test.cjs tests/hover-preview.test.cjs
 ```
 

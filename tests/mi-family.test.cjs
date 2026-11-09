@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const { chromium } = require('playwright-core');
 
 let browser;
-const url = process.env.JOSEKI_URL || 'http://127.0.0.1:9310/';
+const url = process.env.JOSEKI_URL || 'http://127.0.0.1:8000/';
 const family = '芈氏飞刀';
 const prefix = 'B[pd] W[qc] B[qd] W[pc] B[nc]';
 const parse = text => [...text.matchAll(/([BW])\[([a-s])([a-s])\]/g)].map(match => ({

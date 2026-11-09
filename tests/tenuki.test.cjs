@@ -5,7 +5,7 @@ const { readFile } = require('node:fs/promises');
 const { chromium } = require('playwright-core');
 
 let browser;
-const url = process.env.JOSEKI_URL || 'http://127.0.0.1:9310/';
+const url = process.env.JOSEKI_URL || 'http://127.0.0.1:8000/';
 test.before(async () => {
   browser = await chromium.launch({executablePath:process.env.CHROME_PATH,headless:true,args:['--no-sandbox']});
 });

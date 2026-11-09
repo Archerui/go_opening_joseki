@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const { chromium } = require('playwright-core');
 
 let browser;
-const url = process.env.JOSEKI_URL || 'http://127.0.0.1:9310/';
+const url = process.env.JOSEKI_URL || 'http://127.0.0.1:8000/';
 const trees = [
   {name:'芈氏飞刀', source:'josekle', externalId:20832, ply:6, leaves:61},
   {name:'村正妖刀', source:'josekle', externalId:28977, ply:5, leaves:1},
